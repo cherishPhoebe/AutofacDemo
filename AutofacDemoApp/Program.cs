@@ -16,7 +16,7 @@ namespace AutofacDemoApp
             Container = builder.Build();
 
             WriteDate();
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello World!");   
             Console.ReadKey();
         }
 
