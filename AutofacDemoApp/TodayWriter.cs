@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Autofac;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -8,7 +9,12 @@ namespace AutofacDemoApp
         void Write(string content);
     }
 
-    public class ConsoleOutput : IOutput {
+    public class ConsoleOutput : IOutput,IStartable {
+        public void Start()
+        {
+            Console.WriteLine("App is start! yaoyidao");
+        }
+
         public void Write(string content) {
             Console.WriteLine(content);
         }
